@@ -12,5 +12,19 @@
     <button id="addTodoBtn">Add todo</button>
     <!-- your javascript must add todos inside the following tag as <li> tags! -->
     <ol id="todoList"></ol>
+	<script>
+		const addTodo=document.getElementById("addTodoBtn");
+const input=document.getElementById("newTodoInput");
+const ol=document.getElementById("todoList");
+addTodo.addEventListener("click",()=>{
+	if(input.value){
+		const li=document.createElement("li");
+		li.innerText=input.value
+		ol.appendChild(li);
+	}
+	input.value=""
+})
+
+	</script>
 </body>
 </html>
